@@ -4,8 +4,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
-// import HomePage from './home'
-import Login from './login'
+import HomePage from './home'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +21,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className={styles.main}>
-        <Login />
+        <HomePage />
       </main>
     </div>
   )
