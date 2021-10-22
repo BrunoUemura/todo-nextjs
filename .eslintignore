@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+
+# Build
+/.next
+
+# Jest Config File
+jest.config.js
+
+# Eslint Config File
+.eslintrc.js
+
+# Prettier Config File
+.prettierrc.js
+
+# Test files
+**/*.test.ts

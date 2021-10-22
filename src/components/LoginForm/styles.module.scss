@@ -1,0 +1,86 @@
+.loginBoxWrapper {
+  width: 100%;
+
+  padding-top: 200px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .loginTitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .loginName,
+  .loginPassword {
+    margin-top: 20px;
+    padding: 0 10px;
+
+    font-size: 14px;
+
+    height: 35px;
+    width: 250px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .loginButton {
+    background: #1eadff;
+    color: #09090a;
+    border: none;
+
+    margin-top: 32px;
+    height: 45px;
+    width: 250px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(0.9);
+    }
+  }
+
+  .signupLink {
+    margin-top: 32px;
+    color: rgb(219, 219, 219);
+  }
+
+  .signupButton {
+    background-color: transparent;
+    border-color: #1eadff;
+    color: #1eadff;
+
+    margin-top: 15px;
+    height: 45px;
+    width: 250px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #1eadff;
+      color: #000;
+    }
+  }
+}
