@@ -108,4 +108,104 @@
       }
     }
   }
+
+  @media (max-width: 375px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .todoTitleBox {
+      max-width: 300px;
+      padding: 20px 20px 20px 20px;
+
+      .todoTitle {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .todoInputForm {
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+
+        .todoInput {
+          text-align: center;
+          width: 260px;
+          height: 30px;
+          font-size: small;
+          border-radius: 0 0 0 0;
+          border: 0;
+        }
+        .todoInputButton {
+          margin-top: 10px;
+          width: 260px;
+          height: 30px;
+          font-size: small;
+
+          border-radius: 0 0 0 0;
+
+          background-color: #645cff;
+          color: #fff;
+          border: none;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #8983ff;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .todoListBox {
+      max-width: 300px;
+      min-height: 50px;
+      margin-top: 20px;
+
+      .todoListItem {
+        max-width: 300px;
+        min-height: 50px;
+        padding: 10px 10px;
+        margin-top: 10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        background-color: #202024;
+
+        h5 {
+          font-size: medium;
+          text-align: left;
+        }
+
+        svg {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .todoActionButtons {
+          margin-left: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: right;
+          align-items: center;
+        }
+
+        .todoEdit {
+          margin-left: 20px;
+          font-size: 1.1rem;
+          color: #009900;
+        }
+        .todoDelete {
+          margin-left: 10px;
+          font-size: 1rem;
+          color: #990000;
+        }
+      }
+    }
+  }
 }

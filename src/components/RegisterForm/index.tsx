@@ -1,18 +1,32 @@
 /* eslint-disable @next/next/link-passhref */
-import React, { useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { AuthContext } from '../../context/auth'
+// import { AuthContext } from '../../context/auth'
 import styles from './styles.module.scss'
 import Todo from '../Todo'
 
 export default function RegisterBox() {
-  const { user } = useContext(AuthContext)
+  const [hasToken, setHasToken] = useState<boolean>(false)
+  // const { user } = useContext(AuthContext)
 
-  console.log(user)
+  useEffect(() => {
+    if (localStorage.getItem('@auth:token') !== null) {
+      setHasToken(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    ;(async () => {
+      const url = window.location.href
+      const pathName = window.location.pathname
+      const [splittedUrl] = url.split(pathName)
+      window.history.pushState({}, '', splittedUrl)
+    })()
+  }, [])
 
   return (
     <>
-      {user !== undefined ? (
+      {!hasToken ? (
         <div className={styles.registerBoxWrapper}>
           <h1 className={styles.registerTitle}>sign up</h1>
           <input

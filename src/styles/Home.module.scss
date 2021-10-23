@@ -19,3 +19,10 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 375px) {
+  .main {
+    display: flex;
+    align-items: center;
+  }
+}
