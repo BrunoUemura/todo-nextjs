@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+
+import styles from '../../styles/Home.module.scss'
 // import { AuthContext } from '../../context/auth'
 import Todo from '../../components/Todo'
 import Login from '../login'
@@ -17,7 +19,9 @@ export default function Home() {
 
   return (
     <>
-      <div>{hasToken ? <Todo token={token} /> : <Login />}</div>
+      <div className={styles.main}>
+        {hasToken ? <Todo token={token} /> : <Login />}
+      </div>
     </>
   )
 }
