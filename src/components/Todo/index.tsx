@@ -7,6 +7,7 @@ import { BiEdit } from 'react-icons/bi'
 import { FaTrash } from 'react-icons/fa'
 import { api } from '../../services/api'
 import { decode } from 'jsonwebtoken'
+import checkUserSession from '../../utils/CheckAuthentication'
 
 type TodoResponse = {
   id?: string
@@ -29,6 +30,8 @@ export default function Todo({ token }: AuthToken) {
       setTodos(data)
       setRefresh(false)
     })()
+
+    checkUserSession()
   }, [refresh])
 
   async function handleAddTodo(event: FormEvent, title: string) {

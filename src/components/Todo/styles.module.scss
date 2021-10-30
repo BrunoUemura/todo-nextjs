@@ -1,5 +1,5 @@
 .todoBoxWrapper {
-  width: 100%;
+  width: 80vw;
 
   padding-top: 100px;
   text-align: center;
@@ -10,13 +10,13 @@
   align-items: center;
 
   .todoTitleBox {
-    width: 600px;
-    padding: 36px 45px 36px 45px;
+    width: 100%;
+    padding: 40px 20px;
     background-color: #202024;
   }
 
   .todoTitle {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -33,7 +33,7 @@
   }
 
   .todoInput {
-    width: 400px;
+    width: 50%;
     height: 40px;
 
     font-size: large;
@@ -67,9 +67,9 @@
 
   .todoListBox {
     margin-top: 60px;
+    width: 100%;
 
     .todoListItem {
-      width: 600px;
       margin-top: 15px;
       padding: 1rem 2rem;
 
@@ -109,15 +109,8 @@
     }
   }
 
-  @media (max-width: 375px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  @media (max-width: 550px) {
     .todoTitleBox {
-      max-width: 300px;
-      padding: 20px 20px 20px 20px;
-
       .todoTitle {
         font-size: 25px;
         font-weight: bold;
@@ -126,13 +119,14 @@
       }
 
       .todoInputForm {
-        width: 260px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .todoInput {
           text-align: center;
-          width: 260px;
+          width: 80%;
           height: 30px;
           font-size: small;
           border-radius: 0 0 0 0;
@@ -140,7 +134,7 @@
         }
         .todoInputButton {
           margin-top: 10px;
-          width: 260px;
+          width: 80%;
           height: 30px;
           font-size: small;
 
@@ -160,12 +154,12 @@
     }
 
     .todoListBox {
-      max-width: 300px;
+      width: 100%;
       min-height: 50px;
       margin-top: 20px;
 
       .todoListItem {
-        max-width: 300px;
+        width: 100%;
         min-height: 50px;
         padding: 10px 10px;
         margin-top: 10px;
